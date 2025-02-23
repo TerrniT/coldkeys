@@ -1,9 +1,9 @@
 import MainLayout from "~/layouts/main";
 
-export default function HomePage() {
+export default function ProfilePage() {
   return (
     <MainLayout>
-      <h1>Home Page</h1>
+      <h1>Profile Page</h1>
     </MainLayout>
   );
 }

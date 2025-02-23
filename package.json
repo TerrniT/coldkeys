@@ -1,8 +1,7 @@
 {
-  "name": "quantum-template",
-  "private": true,
+  "name": "coldkeys",
   "type": "module",
-  "description": "",
+  "description": "password manager app",
   "scripts": {
     "start": "vinxi start",
     "dev": "vinxi dev",
@@ -11,14 +10,18 @@
     "tauri": "tauri",
     "format": "prettier --write src"
   },
-  "license": "MIT",
   "dependencies": {
+    "@kobalte/core": "^0.13.9",
     "@solidjs/router": "^0.13.6",
     "@solidjs/start": "^1.0.6",
     "@tauri-apps/api": "2.0.0-rc.0",
     "@tauri-apps/plugin-shell": "2.0.0-rc.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "solid-js": "^1.8.19",
+    "tailwind-merge": "^3.0.2",
     "tailwindcss": "^3.4.7",
+    "tailwindcss-animate": "^1.0.7",
     "vinxi": "^0.4.0"
   },
   "devDependencies": {

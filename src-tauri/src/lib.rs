@@ -4,11 +4,11 @@ use tauri_specta::Event;
 // demo command
 #[tauri::command]
 #[specta::specta]
-fn greet(app: tauri::AppHandle, name: &str) -> String {
+fn search(app: tauri::AppHandle, str: &str) -> String {
     DemoEvent("Demo event fired from Rust 🦀".to_string())
         .emit(&app)
         .ok();
-    format!("Hello, {}! You've been greeted from Rust!", name)
+    format!("Here's your search string, {}! You've been greeted from Rust!", str)
 }
 
 // demo event
@@ -29,7 +29,7 @@ pub fn run() {
     let mut builder = tauri::Builder::default();
 
     let specta_builder = tauri_specta::Builder::<tauri::Wry>::new()
-        .commands(tauri_specta::collect_commands![greet])
+        .commands(tauri_specta::collect_commands![search])
         .events(tauri_specta::collect_events![crate::DemoEvent]);
 
     #[cfg(debug_assertions)]

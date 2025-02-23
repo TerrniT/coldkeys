@@ -3,8 +3,8 @@
 /** user-defined commands **/
 
 export const commands = {
-  async greet(name: string): Promise<string> {
-    return await TAURI_INVOKE("greet", { name });
+  async search(str: string): Promise<string> {
+    return await TAURI_INVOKE("search", { str });
   },
 };
 
